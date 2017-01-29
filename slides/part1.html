@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Git Tutorial 1</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .red { color: #fa0000; }
+      .blue { color: #0000fa; }
+
+      /* Two-column layout */
+      .left-column {
+        color: #777;
+        width: 20%;
+        height: 92%;
+        float: left;
+      }
+        .left-column h2:last-of-type, .left-column h3:last-child {
+          color: #000;
+        }
+      .right-column {
+        width: 75%;
+        float: right;
+        padding-top: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# Version Control with Git
+
+# Part I
+
+
+---
+
+# .blue[What is git?]
+
+ - Distributed version control (no central server needed)
+ - Easy to take a snapshot of current state of all tracked files
+ - Differences are efficiently stored
+ - Easy to revert to earlier version, compare between versions
+ 
+## .blue[Also facilitates collaboration:]
+
+ - With yourself on multiple computers (and for backup)
+ - With others (see Part 2)
+ 
+---
+name: gitinit
+
+# .blue[Turn any directory into a git repository:]
+
+```bash
+cd path/to/directory
+git init
+```
+
+This creates a "hidden" directory `.git` containing the database.
+
+---
+template: gitinit
+
+<p>&nbsp;</p>
+
+Then use various commands to tell which files to track, <br>
+take a new "snapshot", etc., e.g.
+
+```bash
+git add file1.txt
+git commit -m "commit message"
+```
+<br>
+(We will do this later)
+---
+name: clone-this-repo
+
+# .blue[Or start by cloning an existing repository:]
+
+For example, get these slides via:
+```bash
+git clone https://github.com/uwescience/git-tutorials-siamcse2017
+
+cd git-tutorials-siamcse2017
+ls -a  # list files, including those "hidden" to see .git
+```
+
+The clone contains all the history!
+
+```bash
+git log
+```
+prints all the commits and the commit messages
+
+---
+template: clone-this-repo
+
+### .red[Try this now.]
+
+Then open `git-tutorials-siamcse2017/slides/part1.html`<br> 
+if you want to view these slides in your browser.
+
+---
+# .blue[Git commit hash codes]
+
+Every time you do a `git commit` you create a new snapshot of the state of all tracked files.
+
+Each commit has a "name" that is a unique 40-character hexadecimal string.
+
+#### .blue[Example:]
+
+Scrolling through `git log` to the beginning shows the first 2 commits:
+
+```bash
+commit 6793f268b9b8c8b7151c7640291d4058a3061214
+Author: Randy LeVeque <rjl@uw.edu>
+Date:   Sun Jan 29 11:20:27 2017 -0800
+
+    Added CC-BY license
+
+commit 02eba6080c561fea283a5a39c24b000535f1b393
+Author: Randy LeVeque <rjl@uw.edu>
+Date:   Sun Jan 29 11:14:44 2017 -0800
+
+    Initial commit with minimal README
+```
+
+The first 7 characters is usually enough to identify a commit, e.g. `02eba60`.
+---
+name: revert1
+
+# .blue[Reverting to a previous version]
+
+#### .red[Try this:]
+
+```bash
+    git checkout 02eba60
+```
+
+This restores the repository to the state after the first commit, when only one file `README.md` existed.  .red[(confirm this via `ls -a`)]
+
+---
+template: revert1
+
+<br>
+#### .blue[To get back to the most recent snapshot:]
+
+```bash
+    git checkout master
+```
+
+(We are on the `master` branch, more about branches later)
+
+.red[Try this and confirm that all files are restored.]
+
+
+---
+
+# .blue[Create a new repository]
+
+Now let's try making a new repository.
+
+(Fill this in)
+
+---
+
+# To do: (More slides needed to guide demos)
+
+ - Illustrate `git init, git add, git commit`
+ - Illustrate `git status, git diff`
+ - Explain difference between untracked, clean, unstaged, staged
+ - Brief discussion of branches, remotes at end of Part 1?
+
+    </textarea>
+
+<!-- ### End of slides ### -->
+
+
+<!--  ## this only works when connected to internet:
+    <script
+    src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+-->
+
+<!--  ## The lines below can be used to view without internet connection,  
+      provided you have the file  remark-latest.min.js
+-->
+    <script
+    src="remark-latest.min.js">
+    </script>
+
+<!-- ## Create the slide show: -->
+
+    <script>
+      var slideshow = remark.create();
+    </script>
+    
+  </body>
+</html>
