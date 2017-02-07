@@ -44,6 +44,10 @@ class: center, middle
 
 # Part I
 
+### Tutorial for the SIAM CSE Conference, 2017
+
+http://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=61491
+
 
 ---
 
@@ -60,13 +64,14 @@ class: center, middle
  - With others (see Part 2)
  
 ---
+name: install
 
-# .blue[Install git]
+## .blue[Install git]
 
 .red[Try this:]  At the command line,
 
 ```bash
-    git help
+    git config --list
 ```
 
 If you don't have `git` installed, see for example:
@@ -78,6 +83,19 @@ If you don't have `git` installed, see for example:
 On Mac OSX you also need Xcode command line tools installed.
 
 Other GUI-based tools also exist.
+
+---
+template:install
+
+### .red[Configure git:] (only need to do this once)
+
+```bash
+    git config --global user.name "John Doe"
+    git config --global user.email johndoe@example.com
+    git config --global core.editor vim
+```
+
+See: http://swcarpentry.github.io/git-novice/02-setup/
 
 
 ---
@@ -94,7 +112,9 @@ Other GUI-based tools also exist.
 Many exist on the web if you search, for example:
 
  - [From the Git Book](https://git-scm.com/docs/gittutorial)
- - [From Software Carpentry](http://swcarpentry.github.io/git-novice/)
+ - From Software Carpentry: http://swcarpentry.github.io/git-novice/
+
+   We will follow this!
  
 ---
 name: gitinit
@@ -210,8 +230,29 @@ template: revert1
 
 Now let's try making a new repository.
 
-(Fill this in)
+From here we will follow:
+ 
+ - http://swcarpentry.github.io/git-novice/03-create/
 
+---
+
+# .blue[Setting up a remote repository]
+
+To list remotes:
+
+```bash
+    git remote -v
+```
+
+To add a new remote:
+
+```bash
+    git remote add <name> <url>
+```
+
+The `<url>` could be:
+
+ - 
 ---
 
 # To do: (More slides needed to guide demos)
