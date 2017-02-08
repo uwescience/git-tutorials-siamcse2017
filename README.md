@@ -5,7 +5,7 @@
 
 Under development, to be used in tutorials at the 2017 SIAM CSE Conference:
 
- - [Version Control with Git - Part I](http://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=61491)
+ - [Version Control with Git - Parts I and II](http://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=61491)
 
 If you clone the repository, you should be able to open the file
 `slides/part1.html` for example in any browser.
