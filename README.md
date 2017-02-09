@@ -26,6 +26,8 @@ Please do the following in preparation for the tutorial:
    
  - Have an editor that you know how to use for modifying files. (e.g. nano, vim, emacs, etc.)
  
+ - For Part 2, you should also have a Github account.  Create a free account at https://github.com/
+ 
 ### Tips:
 
  - See http://installation.software-carpentry.org/ for the software recommended for [Software Carpentry](https://software-carpentry.org/about/) workshops.  We suggest following this if you don't have Git, bash, editors, etc. (especially if you are using a Windows laptop).
