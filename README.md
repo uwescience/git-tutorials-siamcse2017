@@ -10,8 +10,8 @@ Under development, to be used in tutorials at the 2017 SIAM CSE Conference:
 If you clone the repository, you should be able to open the file
 `slides/part1.html` for example in any browser.
 
- - Part 1 is will also be used in an Applied Math Department Tutorial on February 16.
- - Part 2 is will also be used in an eScience Institute Tutorial on February 22.
+ - Part 1 will also be used in an Applied Math Department Tutorial on February 16.
+ - Part 2 will also be used in an eScience Institute Tutorial on February 22.
 
 
 ### Before the tutorial:
