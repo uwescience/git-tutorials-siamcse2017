@@ -43,4 +43,4 @@ Please do the following in preparation for the tutorial:
 
  - See http://installation.software-carpentry.org/ for the software recommended for [Software Carpentry](https://software-carpentry.org/about/) workshops.  We suggest following this if you don't have Git, bash, editors, etc. (especially if you are using a Windows laptop).
  - If you have a MacBook, you will need to install Xcode in order for command line tools to work.
-   
+ - The file `slides/part1.html` in this repository also contains some hints.
