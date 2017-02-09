@@ -10,6 +10,10 @@ Under development, to be used in tutorials at the 2017 SIAM CSE Conference:
 If you clone the repository, you should be able to open the file
 `slides/part1.html` for example in any browser.
 
+ - Part 1 is will also be used in an Applied Math Department Tutorial on February 18.
+ - Part 2 is will also be used in an eScience Institute Tutorial on February 22.
+
+
 ### Before the tutorial:
 
 Please do the following in preparation for the tutorial:
@@ -20,6 +24,13 @@ Please do the following in preparation for the tutorial:
    git clone https://github.com/uwescience/git-tutorials-siamcse2017.git
    ```
    If you don't have Git installed, see for example [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) from the [Git Book](https://git-scm.com/) or the Software Carpentry instructions below.
+   
+   If you cloned the repository earlier and want to update with recent changes:
+   
+   ```
+   cd git-tutorials-siamcse2017
+   git pull
+   ```
    
  - Know how to use basic command line instructions in a Unix shell, such as `cd`, `ls`, etc.  
    See for example: http://swcarpentry.github.io/shell-novice/
