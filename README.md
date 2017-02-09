@@ -14,11 +14,12 @@ If you clone the repository, you should be able to open the file
 
 Please do the following in preparation for the tutorial:
 
- - Make sure you have git installed on your laptop, e.g. by attempting to clone this repository via:
+ - Make sure you have Git installed on your laptop, e.g. by attempting to clone this repository via:
  
    ```
    git clone https://github.com/uwescience/git-tutorials-siamcse2017.git
    ```
+   If you don't have Git installed, see for example [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) from the [Git Book](https://git-scm.com/) or the Software Carpentry instructions below.
    
  - Know how to use basic command line instructions in a Unix shell, such as `cd`, `ls`, etc.  
    See for example: http://swcarpentry.github.io/shell-novice/
