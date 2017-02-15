@@ -209,6 +209,9 @@ name: revert1
 
 This restores the repository to the state after the first commit, when only one file `README.md` existed.  .red[(confirm this via `ls -a`)]
 
+???
+Discuss HEAD and detached HEAD
+
 ---
 template: revert1
 
@@ -223,6 +226,61 @@ template: revert1
 
 .red[Try this and confirm that all files are restored.]
 
+???
+Say something about "detached HEAD" message to lead into next slide
+
+---
+<img src="gitbranch7.png" width=600>
+
+ - HEAD refers to the commit that is currently checked out
+
+ - Usually at the tip of a branch
+
+ - Otherwise HEAD is "detached"
+ 
+ - https://git-scm.com/book/en/v1/Git-Branching-What-a-Branch-Is
+
+
+---
+
+## .blue[Git diff] 
+
+Compare files between two different snapshots, e.g.
+
+```bash
+    git diff --stat 02eba60 master          # show which files changed
+    git diff 02eba60 master -- README.md    # show diff in particular file
+```
+
+
+If you have made changes to a file but not committed the changes, then you can see the difference in file from the snapshot HEAD via
+
+```bash
+    git diff README.md
+```
+
+## .blue[Git status]
+
+Determine if there are changes in your working directory via
+
+```bash
+    git status
+```
+---
+
+# .blue[Staging files for commit]
+
+<img src="git-stage.png" width=600>
+
+[Figure from https://git-scm.com/about/staging-area]
+
+
+
+---
+
+Illustrate checking out a single file
+
+Reverting this file with a new commit
 
 ---
 
@@ -235,6 +293,7 @@ From here we will follow:
  - http://swcarpentry.github.io/git-novice/03-create/
 
 ---
+
 
 # .blue[Setting up a remote repository]
 
@@ -255,6 +314,15 @@ The `<url>` could be:
  - another clone on the same machine
  - a clone on a server or your desktop
  - a repository on Github, Bitbucket, Gitlab, etc.
+
+---
+Cloud hosting sites:
+
+- Popular options:  Github, Bitbucket, Gitlab,
+- Public vs. private
+- Provide issue trackers, wiki pages
+- Pull requests, forks
+- Open source projects -- examples
 
 ---
 
