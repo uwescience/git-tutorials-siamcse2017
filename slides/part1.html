@@ -276,11 +276,6 @@ Determine if there are changes in your working directory via
 
 
 
----
-
-Illustrate checking out a single file
-
-Reverting this file with a new commit
 
 ---
 
@@ -292,18 +287,32 @@ From here we will follow:
  
  - http://swcarpentry.github.io/git-novice/03-create/
 
+???
+
+Switch to working through in a terminal window with a new repo
+
+
+ - Illustrate `git init, git add, git commit`
+ - Illustrate `git status, git diff`
+ - Explain difference between untracked, clean, unstaged, staged
+ - Illustrate checking out a single file
+ - Reverting this file with a new commit
+
 ---
 
 
 # .blue[Setting up a remote repository]
 
-To list remotes:
+.red[To list remotes:]
 
 ```bash
     git remote -v
 ```
 
-To add a new remote:
+If you cloned a repository to get started, there should be a remote named
+`origin` that points to where it was cloned from.
+
+.red[To add a new remote:]
 
 ```bash
     git remote add <name> <url>
@@ -313,25 +322,36 @@ The `<url>` could be:
 
  - another clone on the same machine
  - a clone on a server or your desktop
- - a repository on Github, Bitbucket, Gitlab, etc.
+ - a repository on [Github](https://github.com), 
+   [Bitbucket](https://bitbucket.org/product), 
+   [Gitlab](https://gitlab.com), etc.
 
 ---
-Cloud hosting sites:
+# .blue[Cloud hosting sites:]
 
-- Popular options:  Github, Bitbucket, Gitlab,
+- Some popular options:
+  [Github](https://github.com), 
+  [Bitbucket](https://bitbucket.org/product), 
+  [Gitlab](https://gitlab.com), etc.
 - Public vs. private
-- Provide issue trackers, wiki pages
-- Pull requests, forks
-- Open source projects -- examples
+- Cloud services provide issue trackers, wiki pages
 
----
+## .blue[Workflow models]
 
-# To do: (More slides needed to guide demos)
+- Open source projects often requiring forking, pull requests
+- Managing branches for releases, development, bug fixes,
+- See e.g. https://git-scm.com/docs/gitworkflows
 
- - Illustrate `git init, git add, git commit`
- - Illustrate `git status, git diff`
- - Explain difference between untracked, clean, unstaged, staged
- - Brief discussion of branches, remotes at end of Part 1?
+### Some open source projects on GitHub:
+
+- [Clawpack](https://github.com/clawpack),
+  [Jupyter](https://github.com/jupyter),
+  [IPython](https://github.com/ipython),
+  [knitr](https://github.com/yihui/knitr),
+  [linux](https://github.com/torvalds/linux)
+
+Explore the repositories, pull requests, issues, wiki, etc.
+
 
 
 <!-- ### End of slides ### -->
