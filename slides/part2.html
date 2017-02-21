@@ -69,6 +69,161 @@ See [part1.html](part1.html)
  - Forking a repo
  - Pushing to your fork and doing a pull request
 
+---
+# .blue[Create a repository for experimenting]
+
+```bash
+mkdir git-tests
+cd git-tests
+git init
+```
+
+- Add a `README.md` file
+- Commit changes
+- Modify `README.md`
+- Commit changes
+
+Now `git log` should show two commits.
+
+---
+# .blue[Branching]
+
+Add screenshots from
+
+https://git-scm.com/book/en/v1/Git-Branching-What-a-Branch-Is
+
+---
+# .blue[Branching experiments]
+
+### .red[Try this:]
+
+```bash
+git checkout -b new-feature
+```
+
+- Modify `README.md`
+- Add a new file `file1.txt`
+- Commit changes
+- `git log`
+<br>&nbsp;
+- `git checkout master`
+- `git log`
+- Add a new file `file2.txt`
+- Commit changes
+<br>&nbsp;
+- `git checkout new-feature`
+- `git ls-files`
+
+If you have `gitk` installed, you can also use this to view tree.
+
+---
+# .blue[Merge experiment -- with no conflict]
+
+### .red[Try this:]
+
+```bash
+git checkout master
+git diff --stat new-feature
+git diff new-feature
+git merge new-feature
+```
+
+If you made distinct changes on the two branches (even to different parts of
+the same file) , this should merge fine, without any conflicts.
+
+Now 
+```bash
+git ls-files
+```
+should show both `file1.txt` and `file2.txt` and
+```bash
+git log
+```
+shows the merged history.
+
+---
+# .blue[Merge experiment with conflicts]
+
+```bash
+git checkout -b another-feature master  # branch from master
+```
+
+- Modify `README.md`, add and commit
+- Checkout `master` branch
+- Modify same lines of `README.md`, add and commit
+
+Now try:
+```bash
+git checkout another-feature 
+git merge master
+```
+
+You should have a conflict reported.
+
+---
+
+# .blue[Resolving merge conflicts]
+
+Edit the file with a conflict, you should see lines like this:
+
+```bash
+Add an example
+```
+
+Discuss example...
+
+
+---
+# .blue[Remotes]
+
+- Discuss `origin`, adding additional remotes
+
+---
+# .blue[Contributing to a project on Github]
+
+We will use a temporary repository to play around with:
+
+### .blue[View online:] https://github.com/rjleveque/git-sandbox
+
+## .red[Fork this project:]
+
+Assuming you have a Github account, log in, navigate to the site above, and
+then click the "Fork" button at the top right.
+
+This takes you to a clone of the repository on your own Github account.
+
+Then click the "Clone or download" button and copy the text to clone it,
+e.g. 
+
+```bash
+    git clone https://github.com/YourUserName/git-sandbox.git
+```
+
+---
+
+# .blue[Things to try:]
+
+```bash
+    git clone https://github.com/YourUserName/git-sandbox.git
+    cd git-sandbox
+```
+
+- Modify `README.txt`
+- Add and commit this change
+
+
+```bash
+git push origin
+```
+
+---
+# More to add...
+
+- Make an edit to `README.md` on Github, fetch and merge locally
+- Do a pull request
+- Merge a pull request
+- Disuss Travis and continuous integration, see 
+  https://github.com/rjleveque/git-sandbox/pull/1
 
 <!-- ### End of slides ### -->
 </textarea>
