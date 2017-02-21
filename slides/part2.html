@@ -88,11 +88,64 @@ Now `git log` should show two commits.
 ---
 # .blue[Branching]
 
-Add screenshots from
+Branches allow you to work on multiple indpendent modifications simultaneously.
+A branch could be used for:
 
-https://git-scm.com/book/en/v1/Git-Branching-What-a-Branch-Is
+- Adding a new feature
+- Fixing a bug
+- Trying out changes that you may not want to make permanent
+
+You can easily and instantly switch between branches to work with different
+sets of changes or choose which changes to keep permanently.
+
+[Figures from https://git-scm.com/book/en/v1/Git-Branching-What-a-Branch-Is]
 
 ---
+
+```bash
+git branch testing
+```
+
+<img src="branching2.png">
+
+---
+
+```bash
+git checkout testing
+```
+
+<img src="branching3.png">
+
+---
+
+```bash
+vim test.py
+git add test.py
+git commit -m 'add a test'
+```
+
+<img src="branching4.png">
+
+---
+
+```bash
+git checkout master
+```
+
+<img src="branching5.png">
+
+---
+
+```bash
+vim README.md
+git add README.md
+git commit -m 'update README'
+```
+
+<img src="branching6.png">
+
+---
+
 # .blue[Branching experiments]
 
 ### .red[Try this:]
