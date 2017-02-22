@@ -44,30 +44,49 @@ class: center, middle
 
 # Part 2
 
+
+### On Github: 
+
+https://github.com/uwescience/git-tutorials-siamcse2017
+
+???
+
 ### Tutorial for the SIAM CSE Conference, 2017
 
 http://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=61498
-
 
 ---
 
 # .blue[Review]
 
-See [part1.html](part1.html)
+We assume you: 
+
+- have Git installed
+- understand basics of working on a single branch
+- are comfortable with
+  - `git init` 
+  - `git add`
+  - `git commit`
+  - `git checkout`
+
+
+.red[For some tips:] see [part1.html](part1.html)
 
 ---
 
-# .blue[Things to cover:]
+# .blue[Outline:]
 
  - branching
- - merging and merge conflicts
+ - merging 
+ - merge conflicts
  - remotes
- - remote branches
  - git push 
  - git fetch, git pull
  - Setting up a new repo on Github
- - Forking a repo
+ - Forking a repository
  - Pushing to your fork and doing a pull request
+ - Continuous integration
+
 
 ---
 # .blue[Create a repository for experimenting]
@@ -170,6 +189,15 @@ git checkout -b new-feature
 If you have `gitk` installed, you can also use this to view tree.
 
 ---
+# .blue[Merging]
+
+See:
+
+- https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+
+- https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging
+
+---
 # .blue[Merge experiment -- with no conflict]
 
 ### .red[Try this:]
@@ -200,15 +228,19 @@ shows the merged history.
 ```bash
 git checkout -b another-feature master  # branch from master
 ```
+- modify README.md
+- git add and commit this file
 
-- Modify `README.md`, add and commit
-- Checkout `master` branch
-- Modify same lines of `README.md`, add and commit
-
-Now try:
 ```bash
-git checkout another-feature 
-git merge master
+git checkout master
+```
+- modify README.md -- same lines as before, different change
+- git add and commit this file
+
+
+.red[Now try:]
+```bash
+git merge another-feature 
 ```
 
 You should have a conflict reported.
@@ -220,16 +252,82 @@ You should have a conflict reported.
 Edit the file with a conflict, you should see lines like this:
 
 ```bash
-Add an example
+some text that is fine
+<<<<<<< HEAD
+change made on master branch
+=======
+change made on another-feature branch
+>>>>>>> another-feature
+more text that is fine
 ```
 
-Discuss example...
+### .red[Fix this file by hand and then save it]
 
+Then you can do:
+
+```bash
+git add README.txt  # indicate it has been fixed
+git commit -m "merging another-feature into master"
+```
 
 ---
-# .blue[Remotes]
 
-- Discuss `origin`, adding additional remotes
+# .blue[Setting up a remote repository]
+
+.red[To list remotes:]
+
+```bash
+    git remote -v
+```
+
+- If you cloned the repository, you will see a remote named "origin".
+- If you started it with `git init`, you will have not remotes initially.
+
+.red[To add a new remote:]
+
+```bash
+    git remote add <name> <address>
+```
+
+The `<address>` could be:
+
+ - another clone on the same machine
+ - a clone on a server or your desktop
+ - a repository on [Github](https://github.com), 
+   [Bitbucket](https://bitbucket.org/product), 
+   [Gitlab](https://gitlab.com), etc.
+
+https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes
+---
+# .blue[Cloud hosting sites:]
+
+- Some popular options:
+  [Github](https://github.com), 
+  [Bitbucket](https://bitbucket.org/product), 
+  [Gitlab](https://gitlab.com), etc.
+- Public vs. private
+- Cloud services provide issue trackers, wiki pages
+
+### .blue[Workflow models]
+
+- Open source projects often requiring forking, pull requests
+- Managing branches for releases, development, bug fixes,
+- See e.g. https://git-scm.com/docs/gitworkflows
+
+### Open source projects on GitHub:
+
+- Some sample repositories: 
+  [linux](https://github.com/torvalds/linux),
+  [shablona](https://github.com/uwescience/shablona),
+  [knitr](https://github.com/yihui/knitr)
+
+- "Organizations" with several repositories:
+  [IPython](https://github.com/ipython),
+  [Jupyter](https://github.com/jupyter),
+  [Clawpack](https://github.com/clawpack)
+
+Explore the repositories, pull requests, issues, wiki, etc.
+
 
 ---
 # .blue[Contributing to a project on Github]
@@ -266,11 +364,11 @@ e.g.
 
 
 ```bash
-git push origin
+git push origin master
 ```
 
 ---
-# More to add...
+# Other things to try, time permitting:
 
 - Make an edit to `README.md` on Github, fetch and merge locally
 - Do a pull request
