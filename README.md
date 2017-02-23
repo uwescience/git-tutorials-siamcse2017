@@ -46,3 +46,8 @@ Please do the following in preparation for the tutorial:
  - See http://installation.software-carpentry.org/ for the software recommended for [Software Carpentry](https://software-carpentry.org/about/) workshops.  We suggest following this if you don't have Git, bash, editors, etc. (especially if you are using a Windows laptop).
  - If you have a MacBook, you will need to install Xcode in order for command line tools to work.
  - The file `slides/part1.html` in this repository also contains some hints.
+ 
+
+These tutorials are supported in part by [Github Education](https://education.github.com/), who kindly provided some materials such as [Git cheat sheets](https://education.github.com/git-cheat-sheet-education.pdf) that will be distributed during the tutorial.  See their webpage for other resources, or if you are interested in getting such materials or private repositories for a class you are teaching.
+
+
