@@ -170,7 +170,10 @@ The clone contains all the history!
 ```bash
 git log
 ```
-prints all the commits and the commit messages
+prints all the commits and the commit messages, or:
+```bash
+git log --oneline   # gives one-line summary of each commit
+```
 
 ---
 template: clone-this-repo
@@ -247,7 +250,9 @@ template: revert1
 Say something about "detached HEAD" message to lead into next slide
 
 ---
-<img src="gitbranch7.png" width=600>
+name:head
+
+<img src="head_attached.png" width=600>
 
  - HEAD refers to the commit that is currently checked out
 
@@ -255,8 +260,12 @@ Say something about "detached HEAD" message to lead into next slide
 
  - Otherwise HEAD is "detached"
  
- - https://git-scm.com/book/en/v1/Git-Branching-What-a-Branch-Is
+---
+template:head
 
+<img src="head_detached.png" width=600>
+
+See: https://git-scm.com/book/en/v1/Git-Branching-What-a-Branch-Is
 
 ---
 
